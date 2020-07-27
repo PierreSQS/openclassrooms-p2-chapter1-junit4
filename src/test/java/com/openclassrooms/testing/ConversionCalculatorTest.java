@@ -1,14 +1,13 @@
 package com.openclassrooms.testing;
 
-import org.junit.Ignore;
-import org.junit.Test;
-import org.junit.experimental.categories.Category;
-
 import static java.lang.Math.PI;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.fail;
+
+import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 @Category(Categories.ConversionTests.class)
 public class ConversionCalculatorTest {
