@@ -6,7 +6,7 @@ package com.openclassrooms.testing;
  */
 public class Calculator implements CalculatorInterface {
 
-    private ConversionCalculator conversionCalculator;
+    private final ConversionCalculator conversionCalculator;
 
 
     /**
@@ -33,15 +33,12 @@ public class Calculator implements CalculatorInterface {
     /**
      * {@inheritDoc}
      */
-    public Double convert(ConversionType type, Double value) throws Exception {
-        Double result = null;
-        switch(type) {
-            case RADIUS_TO_AREA:
-                result = conversionCalculator.radiusToAreaOfCircle(value);
-                break;
-            default:
-                //FIXME: Create a custom exception
-                throw new Exception("Unknown ConversionType");
+    public Double convert(ConversionType type, Double value) throws ConversionException {
+        Double result;
+        if (type == ConversionType.RADIUS_TO_AREA) {
+            result = conversionCalculator.radiusToAreaOfCircle(value);
+        } else {
+            throw new ConversionException("Unknown ConversionType");
         }
         return result;
     }

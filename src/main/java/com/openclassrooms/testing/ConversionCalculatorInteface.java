@@ -8,4 +8,6 @@ public interface ConversionCalculatorInteface {
     Double litresToGallons(Double litreVolume);
 
     Double radiusToAreaOfCircle(Double radius);
+
+    Double metersToKilomers(Double meters);
 }

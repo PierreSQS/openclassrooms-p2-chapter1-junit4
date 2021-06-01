@@ -7,7 +7,7 @@ public interface CalculatorInterface {
      *
      * @param left  The first number to be added
      * @param right A number to be added to the left argument
-     * @return
+     * @return result of the addition
      */
     Double add(final Double left, final Double right);
 
@@ -26,5 +26,5 @@ public interface CalculatorInterface {
      * @param value to be converted.
      * @return converted value.
      */
-    Double convert(ConversionType type, Double value) throws Exception;
+    Double convert(ConversionType type, Double value) throws ConversionException;
 }

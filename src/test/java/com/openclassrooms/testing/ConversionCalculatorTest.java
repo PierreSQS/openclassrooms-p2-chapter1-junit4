@@ -4,7 +4,6 @@ import static java.lang.Math.PI;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
-import static org.junit.Assert.fail;
 
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -45,6 +44,7 @@ public class ConversionCalculatorTest {
     @Test
     public void metersToKiloMeters_returns1Km_whenWeConvertAThousandMeters() {
         Double expected = 1.0;
-        fail("Not written yet");
+        Double actualKMeters = calculatorUnderTest.metersToKilomers(1000.0);
+        assertThat(actualKMeters, is(equalTo(expected)));
     }
 }
